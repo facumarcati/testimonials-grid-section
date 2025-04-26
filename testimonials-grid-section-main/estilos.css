@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e4dfdf;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 70px 30px 70px 30px;
+  gap: 40px;
+}
+
+.container-commentary {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: auto;
+  padding: 34px;
+  border-radius: 10px;
+  gap: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.daniel {
+  background-color: #773fc4;
+  color: white;
+}
+
+.jonathan {
+  background-color: #48556a;
+  color: white;
+}
+
+.jeanette {
+  background-color: white;
+}
+
+.patrick {
+  background-color: #191f2d;
+  color: white;
+}
+
+.kira {
+  background-color: white;
+}
+
+.image {
+  height: 48px;
+  border-radius: 50px;
+}
+
+.border-image {
+  border: 3px solid #a27ccb;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.name-graduate {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-size: 16px;
+}
+
+.graduate {
+  font-size: 14px;
+}
+
+.quote {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.commentary {
+  font-size: 14px;
+}
+
+@media (min-width: 1100px) {
+  .testimonials-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .container-commentary.daniel {
+    grid-area: daniel;
+  }
+
+  .container-commentary.jonathan {
+    grid-area: jonathan;
+  }
+
+  .container-commentary.jeanette {
+    grid-area: jeanette;
+  }
+
+  .container-commentary.patrick {
+    grid-area: patrick;
+  }
+
+  .container-commentary.kira {
+    grid-area: kira;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 1099px) {
+  .testimonials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
